@@ -75,6 +75,10 @@ footer {
     color: #999;
 }
 
+#menuToggle {
+    display: none;
+  }  
+
 @media (max-width: 600px) {
     header {
       text-align: center;
