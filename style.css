@@ -76,8 +76,37 @@ footer {
 }
 
 @media (max-width: 600px) {
-    nav {
-    flex-direction: column;
-    align-items: center;
+    header {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      position: relative;
     }
-}
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+      display: none; /* Hidden by default on mobile */
+    }
+  
+    nav.active {
+      display: flex; /* Show when toggled */
+    }
+  
+    #menuToggle {
+      display: block;
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-size: 2rem;
+    }
+  
+    #darkModeToggle {
+      position: static;
+      margin-top: 1rem;
+    }
+  }
+  

@@ -8,6 +8,9 @@
 </head>
 <body>
   <header>
+    <button id="menuToggle" aria-label="Toggle menu" style="background: none; border: none; color: var(--accent); font-size: 2rem; display: none;">
+      &#9776;
+    </button>    
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -95,21 +98,6 @@
   <footer>
     <p>&copy; 2025 Luke DeSando. All rights reserved.</p>
   </footer>
-  <script>
-    const toggleBtn = document.getElementById('darkModeToggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      const mode = document.body.classList.contains('light-mode') ? 'light' : 'dark';
-      localStorage.setItem('theme', mode);
-    });
-  
-    // Load saved preference
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') {
-        document.body.classList.add('light-mode');
-      }
-    });
-  </script>  
+  <script src="scripts.js"></script> 
 </body>
 </html>
