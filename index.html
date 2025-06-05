@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luke DeSando | Data Scientist</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="darkModeToggle" style="position: absolute; right: 1rem; top: 1rem; background: none; border: 2px solid var(--accent); color: var(--accent); padding: 0.5rem 1rem; cursor: pointer;">
+        Toggle Theme
+      </button>      
+  </header>
+
+  <section id="home" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+    <img src="Profile Photo.jfif" alt="Luke DeSando Headshot" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--accent);" />
+    <div>
+      <h1>Luke DeSando</h1>
+      <p>Certified Data Scientist | Economist | Automation Engineer | Web Developer</p>
+    </div>
+  </section>
+  
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a results-driven data scientist with expertise in:
+    <li><strong>Python</strong> for data manipulation, modeling, and scripting</li>
+    <li><strong>Automating complex workflows</strong> using AutoHotkey</li>
+    <li>Strong foundation in <strong>statistical analysis</strong>, hypothesis testing, and inference</li>
+    <li>Skilled in building <strong>predictive models</strong> using <strong>machine learning</strong> and AI libraries</li>
+    <li><strong>SQL</strong> for querying, transforming, and aggregating large datasets</li>
+    <li>Adept at creating <strong>data pipelines</strong> for ETL processes and real-time analytics</li>
+    <li><strong>Flask APIs</strong> for custom data applications</li>
+    <li><strong>Econometrics</strong> for real-world problems in finance and transportation</li>
+    <li>Built interactive dashboards using <strong>Flutter</strong>, <strong>PlutoGrid</strong>, and web technologies</li>
+    <li>Designed <strong>Monte Carlo simulations</strong> to assess tournament outcomes and financial risk</li>
+        My projects span across stock screening, sports analytics, PDF parsing, and more.</p>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a href="Luke DeSando Resume Data Scientist.pdf" target="_blank" style="color: var(--accent);">Download PDF Resume</a></p>
+    <ul>
+        <li><strong>Dinsmore & Shohl</strong> – Legal automation tools, data pipelines (2023 to Current)</li>
+        <li><strong>Yes.Fit</strong> – Built a data pipeline for a fitness app (2021)</li>
+        <li><strong>Center for Urban Transportation Research</strong> – Bicyclist safety analysis (2018)</li>
+        <li><strong>Time Person of the Year</strong> (2006)</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Eurovision Voting App</h3>
+      <p>Flask, MariaDB, Flutter – Voting system with real-time websocket updates, favorite feature, and Spotify integration.</p>
+      <img src="Eurovision Screenshot.png" alt="Eurovision Voting App Screenshot" style="max-width: 100%; margin-top: 1rem; border: 2px solid var(--accent); border-radius: 8px;" />
+    </div>
+    <div class="project">
+      <h3>MLB Matchup Analyzer</h3>
+      <p>R, python, pandas, and scikit-learn - Statcast data parsing and batter-vs-pitcher stats prediction.</p>
+      <img src="Pitches Screenshot.png" alt="Pitch Category Visualization Screenshot" style="max-width: 100%; margin-top: 1rem; border: 2px solid var(--accent); border-radius: 8px;" />
+
+    </div>
+    <div class="project">
+      <h3>PDF Form Automation</h3>
+      <p>AutoHotkey and Python - Extract and submit legal form data into CMS database.</p>
+      <img src="Legal Automation Screenshot.png" alt="Legal Matter Automation Screenshot" style="max-width: 100%; margin-top: 1rem; border: 2px solid var(--accent); border-radius: 8px;" />
+    </div>
+    
+    </div>
+    <div class="project">
+    <h3>Beyond Sidewalks</h3>
+    <p>Data Interpretation and Analysis using Python, Pandas, Matplotlib, and Stata.</p>
+    <p><a href="https://www.cutr.usf.edu/wp-content/uploads/2018/07/Beyond-Sidewalks-Single-Page-Format-180707a.pdf" style="color: var(--accent);">Click Here</a>
+        to see my <strong>Published Research</strong> through the Florida Department of Public Transportation.</p>
+    </div>
+    </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:Lukedesando@gmail.com" style="color: var(--accent);">Lukedesando@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/lukedesando/" style="color: var(--accent);">linkedin.com/in/lukedesando/</a></p>
+    <p>SoundCloud: <a href="https://soundcloud.com/user-429573935" style="color: var(--accent);">soundcloud.com/lukedesando</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Luke DeSando. All rights reserved.</p>
+  </footer>
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const mode = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+      localStorage.setItem('theme', mode);
+    });
+  
+    // Load saved preference
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+      }
+    });
+  </script>  
+</body>
+</html>
